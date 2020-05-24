@@ -1,6 +1,6 @@
 # testssl
 
-testssl only generates self signed certificates for local development.
+testssl generate self signed certificates for local development purposes.
 
 # Features
 - generates wildcard x509 certificates which covers *.domain.tld and domain.tld.
