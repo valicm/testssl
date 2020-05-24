@@ -250,10 +250,6 @@ func parseDomainName(domain string) string {
 		log.Fatalf("Problem with parsing domain name")
 	}
 
-	if domain == "" {
-		log.Fatalf("Missing domain name")
-	}
-
 	host := parse.Host
 
 	if host == "" {
