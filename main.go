@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"testssl/testssl"
+	"github.com/valicm/testssl/testssl"
 )
 
 var (
