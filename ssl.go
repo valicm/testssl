@@ -50,7 +50,7 @@ func main() {
 	}
 
 	b := len(*domain)
-	if b > 252 {
+	if b > 253 {
 		log.Fatal("Max allowed length for a domain is 253 characters")
 	}
 
