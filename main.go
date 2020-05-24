@@ -11,5 +11,6 @@ var (
 )
 
 func main() {
+	flag.Parse()
 	testssl.Execute(*domain, *dir)
 }
