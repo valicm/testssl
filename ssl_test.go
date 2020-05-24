@@ -9,9 +9,9 @@ func Test_parseDomainName(t *testing.T) {
 		domain string
 	}
 	tests := []struct {
-		name string
-		args args
-		want string
+		name    string
+		args    args
+		want    string
 		wantErr bool
 	}{
 		{
@@ -34,7 +34,7 @@ func Test_parseDomainName(t *testing.T) {
 				domain: "pero.zdero",
 			},
 			want: "pero.zdero",
-		},}
+		}}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := parseDomainName(tt.args.domain); got != tt.want {
