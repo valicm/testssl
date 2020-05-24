@@ -40,8 +40,8 @@ type Output struct {
 	key        *rsa.PrivateKey
 }
 
-// Generate certificate files based on passed domain name and directory.
-func GenerateCert(hostname string, dir string) (Output, Output) {
+// Execute generate certificate files based on passed domain name and directory.
+func Execute(hostname string, dir string) (Output, Output) {
 
 	// Parse domain name from input.
 	commonName := parseDomainName(hostname)
