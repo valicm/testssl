@@ -1,7 +1,7 @@
 // Copyright (c) 2020 Valentino Medimorec
 // SPDX-License-Identifier: MIT
 
-package main
+package testssl
 
 import (
 	"bytes"
@@ -12,7 +12,6 @@ import (
 	"crypto/x509/pkix"
 	"encoding/asn1"
 	"encoding/pem"
-	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -26,8 +25,6 @@ import (
 
 var (
 	oidEmailAddress = asn1.ObjectIdentifier{1, 2, 840, 113549, 1, 9, 1}
-	domain          = flag.String("domain", "", "Domain for which you wish to generate SSL")
-	dir             = flag.String("dir", "ssl", "Directory where you want to generate SSL")
 )
 
 // Data hold subject structure.
@@ -43,13 +40,8 @@ type Output struct {
 	key        *rsa.PrivateKey
 }
 
-func main() {
-	// Generate certificates.
-	generateCert(*domain, *dir)
-}
-
 // Generate certificate files based on passed domain name and directory.
-func generateCert(hostname string, dir string) (Output, Output) {
+func GenerateCert(hostname string, dir string) (Output, Output) {
 
 	// Parse domain name from input.
 	commonName := parseDomainName(hostname)
@@ -245,7 +237,6 @@ func generateKey() *rsa.PrivateKey {
 // Helper for parsing passed domain name. Fallback to .test tld.
 func parseDomainName(domain string) string {
 	if domain == "" {
-		flag.PrintDefaults()
 		log.Fatal("Missing domain name")
 	}
 
