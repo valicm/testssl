@@ -1,3 +1,6 @@
+// Copyright (c) 2020 Valentino Medimorec
+// SPDX-License-Identifier: MIT
+
 package main
 
 import (
