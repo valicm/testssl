@@ -12,7 +12,7 @@ testssl generate self signed certificates for local development purposes.
 - `testssl --domain=example` - generates CA for example.test in ssl subfolder
 - `testssl --domain=mylocal.loc --dir=site` - generates CA for mylocal.loc in folder site
 - `testssl --domain=mydoman.test --dir=` - does not output any files
-- `testssl.GenerateCert("mydomain_name", "")` - if you use from other package but don't want to generate files
+- `ssl.GenerateCert("mydomain_name", "")` - if you use from other package but don't want to generate files
 
 # How to use root CA
 - import root CA in your browser 
