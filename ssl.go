@@ -30,12 +30,12 @@ var (
 	dir             = flag.String("dir", "", "Directory where you want to generate SSL")
 )
 
-// Hold subject structure.
+// Data hold subject structure.
 type Data struct {
 	Subject pkix.Name
 }
 
-// Holds plain string and typed output.
+// Output hold plain string and typed output.
 type Output struct {
 	certString string
 	keyString  string
