@@ -1,7 +1,7 @@
 // Copyright (c) 2020 Valentino Medimorec
 // SPDX-License-Identifier: MIT
 
-package testssl
+package ssl
 
 import (
 	"bytes"

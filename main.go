@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/valicm/testssl/testssl"
+	"github.com/valicm/testssl/ssl"
 )
 
 var (
@@ -12,5 +12,5 @@ var (
 
 func main() {
 	flag.Parse()
-	testssl.GenerateCert(*domain, *dir)
+	ssl.GenerateCert(*domain, *dir)
 }

@@ -1,4 +1,4 @@
-package testssl
+package ssl
 
 import (
 	"testing"
