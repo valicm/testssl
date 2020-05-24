@@ -12,5 +12,5 @@ var (
 
 func main() {
 	flag.Parse()
-	testssl.Execute(*domain, *dir)
+	testssl.GenerateCert(*domain, *dir)
 }
